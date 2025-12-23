@@ -14,6 +14,7 @@ import BlochSphere from '../components/BlochSphere';
 import ProbabilityChart from '../components/ProbabilityChart';
 import CorrelationHeatmap from '../components/CorrelationHeatmap';
 import BellMeter from '../components/BellMeter';
+import Navbar from '../components/Navbar';
 
 // Presets
 const STATES = {
@@ -69,21 +70,10 @@ export default function Home() {
     );
 
     return (
-        <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30 overflow-x-hidden">
+        <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500/30 overflow-x-hidden pt-16">
 
-            {/* Navigation / Header */}
-            <nav className="fixed top-0 left-0 right-0 z-40 p-6 flex justify-between items-center bg-gradient-to-b from-slate-950/80 to-transparent pointer-events-none">
-                <div className="pointer-events-auto">
-                    {/* Logo area, intentionally left minimal */}
-                </div>
-                <Link
-                    to="/about"
-                    className="pointer-events-auto flex items-center gap-2 px-4 py-2 bg-slate-900/50 backdrop-blur border border-slate-700 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors"
-                >
-                    <Info className="w-4 h-4 text-cyan-500" />
-                    About this Exhibit
-                </Link>
-            </nav>
+            {/* Navigation */}
+            <Navbar />
 
             {/* 1. Hero Section */}
             <Hero onStart={scrollToSim} />
