@@ -2,6 +2,9 @@
   "name": "two-particle-entanglement-simulator",
   "private": true,
   "version": "0.0.0",
+  "description": "A polished, exhibition-quality interactive experience allowing users to explore quantum entanglement.",
+  "author": "Nigel Varghese",
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "vite",
